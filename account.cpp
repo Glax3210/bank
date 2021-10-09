@@ -7,7 +7,7 @@ using namespace std;
 class account
 {
 private:
-    int balance{};
+    int balance{333333333};
     string name{};
 
 public:
@@ -49,13 +49,24 @@ int main()
     int first_input;
     cout << "what you want> /n 1) check your accout /n 2) diposit /n 3) withdrow" << endl;
     cin >> first_input;
-    robin.acco();
+
     switch (first_input)
     {
     case 1:
-
+        robin.acco();
         break;
-
+    case 2:
+        break;
+    case 3:cout<<"how much you wanna withdrow ?"<<endl;
+    int ammaunt;
+    cin>>ammaunt;
+    if(robin.withdrow(ammaunt)){
+        cout<<"here your "<<ammaunt<<"$"<<endl;
+    }
+    else{
+        cout<<"not sufficient funds"<<endl;
+    }
+        break;
     default:
         break;
     }
